@@ -8,6 +8,7 @@ var view : Control
 func _enter_tree():
     view = get_editor_interface().get_editor_viewport()
     view.connect("item_rect_changed",self,"SetSize")
+    view.connect("hide",self,"SetSize")
     SetSize()
 
 func _exit_tree():
